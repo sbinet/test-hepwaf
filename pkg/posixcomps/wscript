@@ -1,0 +1,19 @@
+# -*- python -*-
+
+def pkg_deps(ctx):
+    return
+
+def configure(ctx):
+    return
+
+def build(ctx):
+    ctx(
+        features="cxx cxxshlib",
+        name="bfd-fpe",
+        source="src/fpe.cxx",
+        use="bfd",
+        )
+    return
+
+def install(ctx):
+    return
