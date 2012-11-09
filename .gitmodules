@@ -1,0 +1,6 @@
+[submodule "waffle"]
+	path = waffle
+	url = git@github.com:mana-fwk/waffle
+[submodule "hep-waftools"]
+	path = hep-waftools
+	url = git@github.com:mana-fwk/hep-waftools
