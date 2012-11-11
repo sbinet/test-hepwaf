@@ -37,20 +37,28 @@ def options(ctx):
 def configure(ctx):
     ctx.load('find_heplibs', tooldir='hep-waftools')
 
+    ctx.find_uuid()
+    ctx.find_python(min_version=(2,6))
+    ctx.find_xrootd()
     ctx.find_cernroot(
         #atleast_version="5.34/02",
         #atleast_version="6.0.0",
         version=(6,0,0),
         )
 
+    ctx.find_aida()
     ctx.find_clhep()
     ctx.find_boost()
-    
+    ctx.find_bzip()
+    ctx.find_posixlibs()
+    ctx.find_gsl()
     ctx.recurse('pkg/rootcomps')
+    ctx.recurse('pkg/posixcomps')
     return
 
 def build(ctx):
     ctx.recurse('pkg/rootcomps')
+    ctx.recurse('pkg/posixcomps')
     return
 
 def check(ctx):

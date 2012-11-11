@@ -1,3 +1,4 @@
+# -*- python -*-
 
 def pkg_deps(ctx):
     return
@@ -10,6 +11,7 @@ def build(ctx):
         features="cxx cxxshlib",
         name="rootcomps",
         source="src/rootcomps.cxx",
+        target="rootcomps",
         use="ROOT",
         )
     return

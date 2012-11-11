@@ -2,5 +2,5 @@
 
 void test_bfd()
 {
-  
+  bfd_init();
 }

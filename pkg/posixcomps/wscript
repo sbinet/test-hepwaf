@@ -11,6 +11,7 @@ def build(ctx):
         features="cxx cxxshlib",
         name="bfd-fpe",
         source="src/fpe.cxx",
+        target="bfd-fpe",
         use="bfd",
         )
     return
